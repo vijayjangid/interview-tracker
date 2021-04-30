@@ -1,11 +1,11 @@
 :root {
-  --shadow: rgba(0, 0, 0, 0.8);
+  --shadow: rgba(0, 0, 0, 0.5);
   --border: rgba(0, 0, 0, 0.2);
   --primary: #00c2a2;
   --default: #fff9e3;
-  --inputBG: rgba(255, 255, 255, 0.5);
-  --text: #000;
-  --paper: rgba(250, 220, 140, 1);
+  --inputBG: rgba(255, 255, 255, 0.7);
+  --text: #333;
+  --paper: rgb(255, 233, 173);
   --gradient: linear-gradient(
     -45deg,
     rgba(250, 220, 140, 1) 0%,
@@ -18,7 +18,7 @@
 /* dark theme */
 .dark {
   --primary: #009c8c;
-  --default: #333333;
+  --default: #686868;
   --inputBG: rgba(0, 0, 0, 0.3);
   --text: #fff;
   --paper: rgba(80, 80, 80, 1);
@@ -38,6 +38,7 @@ body,
   box-sizing: border-box;
   font-size: 1rem;
   color: var(--text);
+  font-size: 14px;
 }
 button {
   background: var(--default);
@@ -47,6 +48,7 @@ button {
   border: solid 1px var(--border);
   opacity: 0.8;
   cursor: pointer;
+  text-transform: uppercase;
 }
 button.primary {
   background: var(--primary);

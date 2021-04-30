@@ -11,9 +11,12 @@
   display: flex;
   flex-direction: column;
 }
+.columns-wrapper .column button {
+  margin-bottom: 0.5em;
+}
 .columns-wrapper .column .card {
   background: var(--paper);
-  margin: 0.5em 0;
+  margin: 1px 0;
   width: 100%;
   box-shadow: 0px 5px 10px -5px var(--shadow);
 }
@@ -21,13 +24,15 @@
   text-align: center;
   font-weight: bold;
   padding: 0.5em;
+  border-bottom: dashed 1px var(--border);
 }
 .card .entry {
   padding: 0.5em;
 }
 .card .entry .key {
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.7;
+  font-size: 0.8em;
 }
 .card .entry .value {
   font-weight: bold;

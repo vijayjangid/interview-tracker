@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useContext } from "react";
+import React, { useCallback, useRef, useContext, useState } from "react";
 import {
   addJobInterview,
   addInterview,
@@ -9,22 +9,16 @@ import "./styles.css";
 
 const NewJobInterviewForm = ({ prefillValue, onCancel }) => {
   const { newInterview, dispatch } = useContext(JobInterviewsContext);
-
   const orgRef = useRef();
   const titleRef = useRef();
   const datetimeRef = useRef();
   const typeRef = useRef();
   const descRef = useRef();
-  const backdropRef = useRef();
 
-  const onBackdropClick = useCallback(
-    ({ target }) => {
-      if (target === backdropRef.current) {
-        dispatch(setNewInterview(null));
-      }
-    },
-    [dispatch]
-  );
+  const handleCancel = ({ target }) => {
+    dispatch(setNewInterview(null));
+  };
+
   const onSubmit = useCallback(
     (e) => {
       e.preventDefault();
@@ -48,12 +42,12 @@ const NewJobInterviewForm = ({ prefillValue, onCancel }) => {
     [dispatch, newInterview]
   );
 
-  if (newInterview === null) {
+  if (!newInterview) {
     return null;
   }
 
   return (
-    <div className="backdrop" ref={backdropRef} onClick={onBackdropClick}>
+    <div className="backdrop">
       <div className="form-wrapper">
         <form onSubmit={onSubmit}>
           <header>Job Detail</header>
@@ -105,9 +99,11 @@ const NewJobInterviewForm = ({ prefillValue, onCancel }) => {
             <textarea id="desc" name="description" ref={descRef} />
           </div>
           <footer>
-            <button type="reset">Reset</button>
             <button className="primary" type="submit">
               Submit
+            </button>
+            <button type="reset" onClick={handleCancel}>
+              Cancel
             </button>
           </footer>
         </form>
