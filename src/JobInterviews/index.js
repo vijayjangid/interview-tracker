@@ -11,7 +11,8 @@ const Card = ({ round, data }) => {
       {round && <header>{round}</header>}
       {Object.entries(data).map(([key, val]) => (
         <div className="entry" key={key}>
-          <span className="key">{key}:</span> {val}
+          <span className="key">{key}: </span>
+          <span className="value">{val}</span>
         </div>
       ))}
     </div>

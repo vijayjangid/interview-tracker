@@ -6,7 +6,7 @@
   padding-top: 1em;
 }
 .columns-wrapper .column {
-  min-width: 100px;
+  min-width: 250px;
   margin: 0 0.5em;
   display: flex;
   flex-direction: column;
@@ -27,5 +27,9 @@
 }
 .card .entry .key {
   text-transform: uppercase;
+  opacity: 0.5;
+}
+.card .entry .value {
   font-weight: bold;
+  margin-left: 0.5em;
 }

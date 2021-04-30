@@ -13,7 +13,7 @@ const NewJobInterviewForm = ({ prefillValue, onCancel }) => {
   const orgRef = useRef();
   const titleRef = useRef();
   const datetimeRef = useRef();
-  const mediaRef = useRef();
+  const typeRef = useRef();
   const descRef = useRef();
   const backdropRef = useRef();
 
@@ -83,8 +83,8 @@ const NewJobInterviewForm = ({ prefillValue, onCancel }) => {
           </div>
           <header>Interview Detail</header>
           <div className="form-control">
-            <label htmlFor="media">Media</label>
-            <select id="media" name="media" ref={mediaRef} required>
+            <label htmlFor="type">Type</label>
+            <select id="type" name="type" ref={typeRef} required>
               <option>Telephonic</option>
               <option>Video Call</option>
               <option>Face 2 Face</option>

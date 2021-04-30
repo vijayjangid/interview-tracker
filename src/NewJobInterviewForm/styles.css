@@ -12,7 +12,7 @@
   background: var(--paper);
   padding: 1em;
   padding-top: 0;
-  width: 50%;
+  width: 400px;
   box-shadow: 0px 0px 42px -21px var(--shadow);
 }
 .form-wrapper form {
